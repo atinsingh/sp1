@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean name="firstTimeBuyerProvider" class="co.pragra.learning.firstspringproject.business.FirstTimeBuyerProvider">
+
+        </bean>
+        <bean name="rateProvider" class="co.pragra.learning.firstspringproject.business.RateProvider"></bean>
+        <bean name="calculator" class="co.pragra.learning.firstspringproject.business.PaymentCalculator">
+            <constructor-arg name="loanAmount" value="20000"></constructor-arg>
+            <constructor-arg name="tenure" value="2"></constructor-arg>
+            <constructor-arg name="interestProvider" ref="rateProvider"></constructor-arg>
+        </bean>
+</beans>
