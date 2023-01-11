@@ -1,5 +1,6 @@
 package co.pragra.learning.firstspringproject;
 
+import co.pragra.learning.firstspringproject.business.Account;
 import co.pragra.learning.firstspringproject.business.FirstTimeBuyerProvider;
 import co.pragra.learning.firstspringproject.business.PaymentCalculator;
 import org.springframework.boot.SpringApplication;
@@ -17,6 +18,9 @@ public class FirstspringProjectApplication {
 		PaymentCalculator calculator = context.getBean("calculator", PaymentCalculator.class);
 		double payment = calculator.calculatePayment();
 		System.out.println("payment = " + payment);
+
+		Account account = context.getBean("account", Account.class);
+		System.out.println("account = " + account);
 
 	}
 

@@ -12,4 +12,9 @@
             <constructor-arg name="tenure" value="2"></constructor-arg>
             <constructor-arg name="interestProvider" ref="rateProvider"></constructor-arg>
         </bean>
+        <bean name="account" class="co.pragra.learning.firstspringproject.business.Account">
+            <property name="name" value="Surinder"></property>
+            <property name="accountName" value="SavingAccount"></property>
+            <property name="balance" value="100000"></property>
+        </bean>
 </beans>
